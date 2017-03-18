@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 h1 {
-  
+  text-transform: none;
 }
 h2 {
   font-family: 'Roboto Condensed', sans-serif;
@@ -24,6 +24,10 @@ a {
 
 ul {
   font-family: 'Open Sans', sans-serif;
+}
+
+#l-page {
+  margin: 20px auto 30px auto;
 }
 
 .cardboard {
