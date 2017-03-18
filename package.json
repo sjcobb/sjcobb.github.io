@@ -1,0 +1,23 @@
+{
+  "name": "sjcobb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "normalize.css": "^5.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sjcobb/sjcobb.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sjcobb/sjcobb.github.io/issues"
+  },
+  "homepage": "https://github.com/sjcobb/sjcobb.github.io#readme"
+}

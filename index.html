@@ -1,43 +1,56 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script src="js/lib/vue.js"></script>
-	<title>sjcobb</title>
-</head>
-<body>
-	<header>
-		<h1>sjcobb</h1>
-	</header>
+  <html>
+  <head>
+  	<meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Roboto+Condensed" rel="stylesheet">
+  	<link rel="stylesheet" type="text/css" href="css/style.css">
+  	<title>sjcobb</title>
+  </head>
+  <body>
+  	<header>
+      <div class="cardboard">
+        <div class="nose"></div>
+        <div class="eyes"></div>
+      </div>
+  		<h1>Why? Why not.</h1>
+  	</header>
 
-	<main>
-		<section>
-			<h2>Links:</h2>
-			<ul>
-				<li>
-					<a href="https://lost-woods.com">Lost Woods</a>
-					<a href="https://github.com/sjcobb/lost-woods">GitHub</a>
-				</li>
-				<li>
-					<a href="https://sjcobb.github.io/fire-temple">Fire Temple</a>
-					<a href="https://github.com/sjcobb/fire-temple">GitHub</a>
-				</li>
-				<li>
-					<a href="https://sjcobb.github.io/ice-cavern">Ice Cavern</a>
-					<a href="https://github.com/sjcobb/ice-cavern">GitHub</a>
-				</li>
-				<li>
-					<a href="https://sjcobb.github.io/lake-hylia/">Lake Hylia</a>
-					<a href="https://github.com/sjcobb/lake-hylia">GitHub</a>
-				</li>
-				<li><a href="/aframe/mirror">Mirror</a></li>
-			</ul>
-		</section>
-	</main>
+  	<main>
+  		<section>
 
-	<footer>
+  			<div id="app">
+  			 <p>{{ message }}</p>
+  			</div>
+  			
+  		</section>
+  		<section>
+  			<h2>Links:</h2>
+  			<ul>
+  				<li>
+  					<a href="https://lost-woods.com">Lost Woods</a>
+  					<a href="https://github.com/sjcobb/lost-woods">GitHub</a>
+  				</li>
+  				<li>
+  					<a href="https://sjcobb.github.io/fire-temple">Fire Temple</a>
+  					<a href="https://github.com/sjcobb/fire-temple">GitHub</a>
+  				</li>
+  				<li>
+  					<a href="https://sjcobb.github.io/ice-cavern">Ice Cavern</a>
+  					<a href="https://github.com/sjcobb/ice-cavern">GitHub</a>
+  				</li>
+  				<li>
+  					<a href="https://sjcobb.github.io/lake-hylia/">Lake Hylia</a>
+  					<a href="https://github.com/sjcobb/lake-hylia">GitHub</a>
+  				</li>
+  				<li><a href="/aframe/mirror">Mirror</a></li>
+  			</ul>
+  		</section>
+  	</main>
 
-	</footer>
-</body>
+  	<footer>
+      
+      <script src="js/lib/vue.js"></script>
+      <script src="js/app.js"></script>
+  	</footer>
+  </body>
 </html>
