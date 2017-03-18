@@ -1,11 +1,10 @@
-html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  background-color: #FF6E37;
-  display: flex;
+html {
+  
 }
 
+body {
+  
+}
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
@@ -25,20 +24,6 @@ a {
 
 ul {
   font-family: 'Open Sans', sans-serif;
-}
-
-header {
-  
-}
-footer {
-  
-}
-
-main {
-  
-}
-section {
-  
 }
 
 .cardboard {
@@ -72,7 +57,6 @@ section {
   content: '';
   right: 0;
 }
-
 .nose {
   z-index: 1;
   position: absolute;
@@ -104,7 +88,6 @@ section {
   content: '';
   background-color: #FF6E37;
 }
-
 .eyes {
   position: absolute;
   top: 0;
