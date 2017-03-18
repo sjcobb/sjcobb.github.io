@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="js/lib/vue.js"></script>
 </head>
 <body>
   <div id="l-page" class="container">
@@ -18,6 +19,32 @@
           <h1>Why? Why not.</h1>
           <p>Here's some stuff I made or am making.</p>
         </div>
+
+        <section class="l-vue l-region">
+          <div id="app">
+            <p>{{ message }}</p>
+          </div>
+          
+          <div id="app-5">
+            <p>{{ message }}</p>
+            <button v-on:click="reverseMessage">Reverse Message</button>
+          </div>
+
+          <div id="app-6">
+            <p>{{ message }}</p>
+            <input v-model="message">
+          </div>
+
+          <div id="app-7">
+            <ol>
+              <!-- Now we provide each todo-item with the todo object    -->
+              <!-- it's representing, so that its content can be dynamic -->
+              <todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
+            </ol>
+          </div>
+          
+        </section>
+
         <div class="row">
           <div class="col-6 col-lg-4">
             <div class="card">
