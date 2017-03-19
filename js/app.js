@@ -40,3 +40,18 @@ var app7 = new Vue({
     ]
   }
 })
+
+Vue.component('link-item', {
+  props: ['link'],
+  template: '<a v-bind:href="link.url" class="list-group-item" target="_blank">{{ link.text }}</a>'
+})
+var appSidebar = new Vue({
+  el: '#app-sidebar',
+  data: {
+    linkList: [
+      { text: 'Awesome A-Frame', url: 'https://github.com/aframevr/awesome-aframe' },
+      { text: 'Three.js examples', url: 'https://threejs.org/examples' },
+      { text: 'Another link', url: '/' }
+    ]
+  }
+})
