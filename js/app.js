@@ -57,16 +57,22 @@ var appSidebar = new Vue({
 })
 
 var body = document.body;
-var date1991 = document.getElementById("date-1991");
+var date1999 = document.getElementById("date-1999");
 var date2011 = document.getElementById("date-2011");
 var date2017 = document.getElementById("date-2017");
 
+date1999.addEventListener('click', function() {
+  body.classList.remove("d2011", "d2017");
+  body.classList.add("d1999");
+}, false);
+
 date2011.addEventListener('click', function() {
-  body.classList.remove("bootstrap4");
-  body.classList.add("bootstrap1");
+  body.classList.remove("d1999", "d2017");
+  body.classList.add("d2011");
 }, false);
 
 date2017.addEventListener('click', function() {
-  body.classList.remove("bootstrap1");
-  body.classList.add("bootstrap4");
+  body.classList.remove("d1999", "d2011");
+  body.classList.add("d2017");
 }, false);
+
