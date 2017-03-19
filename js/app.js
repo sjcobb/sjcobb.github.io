@@ -55,3 +55,18 @@ var appSidebar = new Vue({
     ]
   }
 })
+
+var body = document.body;
+var date1991 = document.getElementById("date-1991");
+var date2011 = document.getElementById("date-2011");
+var date2017 = document.getElementById("date-2017");
+
+date2011.addEventListener('click', function() {
+  body.classList.remove("bootstrap4");
+  body.classList.add("bootstrap1");
+}, false);
+
+date2017.addEventListener('click', function() {
+  body.classList.remove("bootstrap1");
+  body.classList.add("bootstrap4");
+}, false);
