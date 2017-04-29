@@ -19,7 +19,7 @@ new Vue({
 
         var pen_data = response.data;
         console.log(pen_data.data);
-        
+
         vm.list = pen_data.data;
         //vm.list = response.data;
 
@@ -52,7 +52,7 @@ var appSidebar = new Vue({
 
 var html = document.documentElement;
 var date1999 = document.getElementById("date-1999");
-var date2011 = document.getElementById("date-2011");
+//var date2011 = document.getElementById("date-2011");
 var date2017 = document.getElementById("date-2017");
 
 date1999.addEventListener('click', function() {
@@ -60,10 +60,10 @@ date1999.addEventListener('click', function() {
   html.classList.add("d1999");
 }, false);
 
-date2011.addEventListener('click', function() {
+/*date2011.addEventListener('click', function() {
   html.classList.remove("d1999", "d2017");
   html.classList.add("d2011");
-}, false);
+}, false);*/
 
 date2017.addEventListener('click', function() {
   html.classList.remove("d1999", "d2011");
