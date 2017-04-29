@@ -1,46 +1,32 @@
 /*** APP JS ***/
 
-var app = new Vue({
-  el: '#app',
-  data: {
-    message: 'Hello Vue!'
-  }
-})
+//http://cpv2api.com/
+//http://cpv2api.com/pens/showcase/sjcobb
+var apiURL = 'https://api.github.com/repositories/11730342/commits?per_page=5&sha=';
 
-var app5 = new Vue({
-  el: '#app-5',
+// Vue Axios Call
+new Vue({
+  el: '#penList',
   data: {
-    message: 'Hello Vue, dynamic text example!'
+    list: null
   },
   methods: {
-    reverseMessage: function () {
-      this.message = this.message.split('').reverse().join('')
+    getUsers: function() {
+      var vm = this;
+      axios.get('https://jsonplaceholder.typicode.com/users').then(function(response) {
+        vm.list = response.data;
+      }, function(error) {
+        console.log(error.statusText);
+      });
     }
+  },
+  mounted: function() {
+    this.getUsers();
   }
-})
+});
 
-var app6 = new Vue({
-  el: '#app-6',
-  data: {
-    message: 'Hello Vue!'
-  }
-})
 
-Vue.component('todo-item', {
-  props: ['todo'],
-  template: '<li>{{ todo.text }}</li>'
-})
-var app7 = new Vue({
-  el: '#app-7',
-  data: {
-    groceryList: [
-      { text: 'Vegetables' },
-      { text: 'Cheese' },
-      { text: 'Whatever else humans are supposed to eat' }
-    ]
-  }
-})
-
+/*** SIDEBAR ***/
 Vue.component('link-item', {
   props: ['link'],
   template: '<a v-bind:href="link.url" class="list-group-item" target="_blank">{{ link.text }}</a>'
@@ -76,3 +62,29 @@ date2017.addEventListener('click', function() {
   html.classList.add("d2017");
 }, false);
 
+/*** TESTING ***/
+/*var app5 = new Vue({
+  el: '#app-5',
+  data: {
+    message: 'Hello Vue, dynamic text example!'
+  },
+  methods: {
+    reverseMessage: function () {
+      this.message = this.message.split('').reverse().join('')
+    }
+  }
+})
+Vue.component('todo-item', {
+  props: ['todo'],
+  template: '<li>{{ todo.text }}</li>'
+})
+var app7 = new Vue({
+  el: '#app-7',
+  data: {
+    groceryList: [
+      { text: 'Vegetables' },
+      { text: 'Cheese' },
+      { text: 'Whatever else humans are supposed to eat' }
+    ]
+  }
+})*/
