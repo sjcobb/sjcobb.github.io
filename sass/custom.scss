@@ -30,11 +30,6 @@ ul {
 button {
 	cursor: pointer;
 }
-
-#l-page {
-  margin: 20px auto 30px auto;
-}
-
 section {
   margin: 0 0 30px 0;
 }
@@ -45,98 +40,132 @@ section.l-vue > div {
   border-bottom: 1px solid #ddd;
 }
 
-.cardboard {
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 500px;
-  height: 325px;
-  position: relative;
-  animation: 2s warp ease-in-out infinite;
-  transform: scale(0.25);
+#l-page {
+	margin: 0;
+	.l-content-header {
+		min-height: 300px;
+		position: relative;
+		padding: 10px 20px;
+		background-image: url("/assets/dk-woods.jpg");
+		background-attachment: fixed;
+		.text-container {
+			color: #fff;
+			text-align: center;
+			h1 {
+				margin: 20px 0 10px 0;
+				font-family: 'Roboto', sans-serif;
+				text-transform: uppercase;
+			}
+		}
+	}
 }
-.cardboard:before {
-  position: absolute;
-  top: 0;
-  width: 175px;
-  height: 325px;
-  background-color: #FFF;
-  border-radius: 30px 0px 20px 30px;
-  content: '';
-  left: 0;
+#l-date {
+	background: #FF6E37;
+	text-align: center;
+	.btn-wrap {
+		display: inline-block;
+		margin: 0 auto;
+		padding: 15px 0;
+	}
 }
-.cardboard:after {
-  position: absolute;
-  top: 0;
-  width: 175px;
-  height: 325px;
-  background-color: #FFF;
-  border-radius: 0px 30px 30px 20px;
-  content: '';
-  right: 0;
+.cardboard-container {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	.cardboard {
+	  display: flex;
+	  margin: auto;
+	  justify-content: center;
+	  flex-wrap: wrap;
+	  width: 500px;
+	  height: 325px;
+	  background: #0D0F1E;
+	  position: relative;
+	  animation: 2s warp ease-in-out infinite;
+	  transform: scale(0.25);
+	  &:before {
+	  	position: absolute;
+	  	top: 0;
+	  	width: 175px;
+	  	height: 325px;
+	  	background-color: #FFF;
+	  	border-radius: 30px 0px 20px 30px;
+	  	content: '';
+	  	left: 0;
+	  }
+	  &:after {
+	  	position: absolute;
+	  	top: 0;
+	  	width: 175px;
+	  	height: 325px;
+	  	background-color: #FFF;
+	  	border-radius: 0px 30px 30px 20px;
+	  	content: '';
+	  	right: 0;
+	  }
+	  .nose {
+	    z-index: 1;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    border-radius: 30px;
+	    width: 500px;
+	    height: 312px;
+	    background-color: #FFF;
+	    &:before {
+	    	position: absolute;
+	    	top: 197px;
+	    	left: 174px;
+	    	width: 72px;
+	    	height: 0px;
+	    	border-style: solid;
+	    	border-width: 25px 40px 90px 40px;
+	    	border-color: transparent transparent #0D0F1E transparent;
+	    	content: '';
+	    }
+	    &:after {
+	    	position: absolute;
+	    	top: 198px;
+	    	left: 211px;
+	    	width: 78px;
+	    	height: 78px;
+	    	border-radius: 50%;
+	    	content: '';
+	    	background-color: #0D0F1E;
+	    }
+	  }
+	  .eyes {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 500px;
+	    height: 325px;
+	    &:before {
+	    	z-index: 2;
+	    	position: absolute;
+	    	top: 100px;
+	    	border-radius: 50%;
+	    	width: 120px;
+	    	height: 120px;
+	    	background-color: #0D0F1E;
+	    	content: '';
+	    	left: 75px;
+	    }
+	    &:after {
+	    	z-index: 2;
+	    	position: absolute;
+	    	top: 100px;
+	    	border-radius: 50%;
+	    	width: 120px;
+	    	height: 120px;
+	    	background-color: #0D0F1E;
+	    	content: '';
+	    	right: 75px;
+	    }
+	  }
+	}
 }
-.nose {
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 30px;
-  width: 500px;
-  height: 312px;
-  background-color: #FFF;
-}
-.nose:before {
-  position: absolute;
-  top: 197px;
-  left: 174px;
-  width: 72px;
-  height: 0px;
-  border-style: solid;
-  border-width: 25px 40px 90px 40px;
-  border-color: transparent transparent #FF6E37 transparent;
-  content: '';
-}
-.nose:after {
-  position: absolute;
-  top: 198px;
-  left: 211px;
-  width: 78px;
-  height: 78px;
-  border-radius: 50%;
-  content: '';
-  background-color: #FF6E37;
-}
-.eyes {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 500px;
-  height: 325px;
-}
-.eyes:before {
-  z-index: 2;
-  position: absolute;
-  top: 100px;
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  background-color: #FF6E37;
-  content: '';
-  left: 75px;
-}
-.eyes:after {
-  z-index: 2;
-  position: absolute;
-  top: 100px;
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  background-color: #FF6E37;
-  content: '';
-  right: 75px;
-}
-
 @keyframes warp {
   0% {
     opacity: .5;

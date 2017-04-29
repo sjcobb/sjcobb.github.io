@@ -13,121 +13,119 @@
   <script src="js/lib/vue.js"></script>
 </head>
 <body>
-  <div id="l-date" class="container">
-    <button id="date-1999" class="btn btn-primary">1999</button>
-    <button id="date-2011" class="btn btn-primary">2011</button>
-    <button id="date-2017" class="btn btn-primary">2017</button>
+  <div id="l-date">
+    <div class="container">
+      <div class="btn-wrap">
+        <button id="date-1999" class="btn btn-primary">1999</button>
+        <button id="date-2011" class="btn btn-primary">2011</button>
+        <button id="date-2017" class="btn btn-primary">2017</button>
+      </div>
+    </div>
   </div>
-  <div id="l-page" class="container">
-    <div class="row row-offcanvas row-offcanvas-right">
-      <div class="col-12 col-md-9">
-        <p class="float-right hidden-md-up">
-          <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Toggle nav</button>
-        </p>
-        <div class="jumbotron">
-          <h1>Why? Why not.</h1>
-          <p>Here's some stuff I made or am making.</p>
-        </div>
+  <div id="l-page" class="">
 
-        <section class="l-vue l-region">
-          <div id="app">
-            <p>{{ message }}</p>
+    <div class="l-content-header">
+      <div class="container">
+          <div class="text-container">
+            <h1>Why? Why not.</h1>
+            <p>Here's some stuff I made or am making.</p>
           </div>
+          <div class="cardboard-container">
+            <div class="cardboard">
+              <div class="nose"></div>
+              <div class="eyes"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="row row-offcanvas row-offcanvas-right">
+        <div class="col-12 col-md-9">
+          <p class="float-right hidden-md-up">
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Toggle nav</button>
+          </p>
           
-          <div id="app-5">
-            <p>{{ message }}</p>
-            <button v-on:click="reverseMessage">Reverse Message</button>
-          </div>
-
-          <div id="app-6">
-            <p>{{ message }}</p>
-            <input v-model="message">
-          </div>
-
-          <div id="app-7">
-            <ol>
-              <todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
-            </ol>
-          </div>
-
-        </section>
-
-        <div class="row">
-          <div class="col-6 col-lg-4">
-            <div class="card">
-              <img class="card-img-top" src="http://placehold.it/350x150" alt="Card image cap">
-              <div class="card-block">
-                <h4 class="card-title">Card Title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+          <div class="row">
+            <div class="col-6 col-lg-4">
+              <div class="card">
+                <img class="card-img-top" src="http://placehold.it/350x150" alt="Card image cap">
+                <div class="card-block">
+                  <h4 class="card-title">Card Title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-6 col-lg-4">
-            <div class="card">
-              <img class="card-img-top" src="http://placehold.it/350x150" alt="Card image cap">
-              <div class="card-block">
-                <h4 class="card-title">Card Title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="col-6 col-lg-4">
+              <div class="card">
+                <img class="card-img-top" src="http://placehold.it/350x150" alt="Card image cap">
+                <div class="card-block">
+                  <h4 class="card-title">Card Title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-6 col-lg-4">
-            <div class="card">
-              <img class="card-img-top" src="http://placehold.it/350x150" alt="Card image cap">
-              <div class="card-block">
-                <h4 class="card-title">Card Title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="col-6 col-lg-4">
+              <div class="card">
+                <img class="card-img-top" src="http://placehold.it/350x150" alt="Card image cap">
+                <div class="card-block">
+                  <h4 class="card-title">Card Title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-6 col-lg-4">
-            <div class="card">
-              <img class="card-img-top" src="http://placehold.it/350x150" alt="Card image cap">
-              <div class="card-block">
-                <h4 class="card-title">Card Title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="col-6 col-lg-4">
+              <div class="card">
+                <img class="card-img-top" src="http://placehold.it/350x150" alt="Card image cap">
+                <div class="card-block">
+                  <h4 class="card-title">Card Title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-6 col-lg-4">
-            <div class="card">
-              <img class="card-img-top" src="http://placehold.it/350x150" alt="Card image cap">
-              <div class="card-block">
-                <h4 class="card-title">Card Title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="col-6 col-lg-4">
+              <div class="card">
+                <img class="card-img-top" src="http://placehold.it/350x150" alt="Card image cap">
+                <div class="card-block">
+                  <h4 class="card-title">Card Title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-6 col-lg-4">
-            <div class="card">
-              <img class="card-img-top" src="http://placehold.it/350x150" alt="Card image cap">
-              <div class="card-block">
-                <h4 class="card-title">Card Title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="col-6 col-lg-4">
+              <div class="card">
+                <img class="card-img-top" src="http://placehold.it/350x150" alt="Card image cap">
+                <div class="card-block">
+                  <h4 class="card-title">Card Title</h4>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
               </div>
             </div>
-          </div>
-        </div><!--/row-->
-      </div><!--/span-->
+          </div><!--/row-->
+        </div><!--/span-->
 
-      <div class="col-6 col-md-3 sidebar-offcanvas" id="sidebar">
-        <h3>Extra Links</h3>
+        <div class="col-6 col-md-3 sidebar-offcanvas" id="sidebar">
+          <h3>Extra Links</h3>
 
-        <div id="app-sidebar">
-          <ul class="list-group">
-            <link-item v-for="item in linkList" v-bind:link="item"></link-item>
-          </ul>
-        </div>
+          <div id="app-sidebar">
+            <ul class="list-group">
+              <link-item v-for="item in linkList" v-bind:link="item"></link-item>
+            </ul>
+          </div>
 
-      </div><!--/span-->
-    </div><!--/row-->
+        </div><!--/span-->
+      </div><!--/row-->
+    </div>
+
     <hr>
+
     <footer>
       <p>Footer Text</p>
     </footer>

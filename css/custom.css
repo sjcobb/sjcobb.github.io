@@ -24,10 +24,6 @@ button {
   cursor: pointer;
 }
 
-#l-page {
-  margin: 20px auto 30px auto;
-}
-
 section {
   margin: 0 0 30px 0;
 }
@@ -38,19 +34,61 @@ section.l-vue > div {
   border-bottom: 1px solid #ddd;
 }
 
-.cardboard {
+#l-page {
+  margin: 0;
+}
+
+#l-page .l-content-header {
+  min-height: 300px;
+  position: relative;
+  padding: 10px 20px;
+  background-image: url("/assets/dk-woods.jpg");
+  background-attachment: fixed;
+}
+
+#l-page .l-content-header .text-container {
+  color: #fff;
+  text-align: center;
+}
+
+#l-page .l-content-header .text-container h1 {
+  margin: 20px 0 10px 0;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+}
+
+#l-date {
+  background: #FF6E37;
+  text-align: center;
+}
+
+#l-date .btn-wrap {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+
+.cardboard-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.cardboard-container .cardboard {
   display: flex;
   margin: auto;
   justify-content: center;
   flex-wrap: wrap;
   width: 500px;
   height: 325px;
+  background: #0D0F1E;
   position: relative;
   animation: 2s warp ease-in-out infinite;
   transform: scale(0.25);
 }
 
-.cardboard:before {
+.cardboard-container .cardboard:before {
   position: absolute;
   top: 0;
   width: 175px;
@@ -61,7 +99,7 @@ section.l-vue > div {
   left: 0;
 }
 
-.cardboard:after {
+.cardboard-container .cardboard:after {
   position: absolute;
   top: 0;
   width: 175px;
@@ -72,7 +110,7 @@ section.l-vue > div {
   right: 0;
 }
 
-.nose {
+.cardboard-container .cardboard .nose {
   z-index: 1;
   position: absolute;
   top: 0;
@@ -83,7 +121,7 @@ section.l-vue > div {
   background-color: #FFF;
 }
 
-.nose:before {
+.cardboard-container .cardboard .nose:before {
   position: absolute;
   top: 197px;
   left: 174px;
@@ -91,11 +129,11 @@ section.l-vue > div {
   height: 0px;
   border-style: solid;
   border-width: 25px 40px 90px 40px;
-  border-color: transparent transparent #FF6E37 transparent;
+  border-color: transparent transparent #0D0F1E transparent;
   content: '';
 }
 
-.nose:after {
+.cardboard-container .cardboard .nose:after {
   position: absolute;
   top: 198px;
   left: 211px;
@@ -103,10 +141,10 @@ section.l-vue > div {
   height: 78px;
   border-radius: 50%;
   content: '';
-  background-color: #FF6E37;
+  background-color: #0D0F1E;
 }
 
-.eyes {
+.cardboard-container .cardboard .eyes {
   position: absolute;
   top: 0;
   left: 0;
@@ -114,26 +152,26 @@ section.l-vue > div {
   height: 325px;
 }
 
-.eyes:before {
+.cardboard-container .cardboard .eyes:before {
   z-index: 2;
   position: absolute;
   top: 100px;
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  background-color: #FF6E37;
+  background-color: #0D0F1E;
   content: '';
   left: 75px;
 }
 
-.eyes:after {
+.cardboard-container .cardboard .eyes:after {
   z-index: 2;
   position: absolute;
   top: 100px;
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  background-color: #FF6E37;
+  background-color: #0D0F1E;
   content: '';
   right: 75px;
 }
