@@ -1,5 +1,6 @@
 /*** APP JS ***/
 
+//http://jsonplaceholder.typicode.com
 //http://cpv2api.com/
 //http://cpv2api.com/pens/showcase/sjcobb
 var apiURL = 'https://api.github.com/repositories/11730342/commits?per_page=5&sha=';
@@ -13,8 +14,15 @@ new Vue({
   methods: {
     getUsers: function() {
       var vm = this;
-      axios.get('https://jsonplaceholder.typicode.com/users').then(function(response) {
-        vm.list = response.data;
+      //axios.get('https://jsonplaceholder.typicode.com/users').then(function(response) {
+      axios.get('http://cpv2api.com/pens/showcase/sjcobb').then(function(response) {
+
+        var pen_data = response.data;
+        console.log(pen_data.data);
+        
+        vm.list = pen_data.data;
+        //vm.list = response.data;
+
       }, function(error) {
         console.log(error.statusText);
       });
