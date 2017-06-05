@@ -3,6 +3,8 @@
 //http://jsonplaceholder.typicode.com
 //http://cpv2api.com/
 //http://cpv2api.com/pens/showcase/sjcobb
+//https://api.github.com/users/sjcobb
+//http://stackoverflow.com/questions/43352056/how-do-i-make-an-api-call-to-github-for-a-users-pinned-repositories
 var apiURL = 'https://api.github.com/repositories/11730342/commits?per_page=5&sha=';
 
 // Vue Axios Call
