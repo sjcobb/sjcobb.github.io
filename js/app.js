@@ -1,7 +1,6 @@
 /*** APP JS ***/
 
 //http://jsonplaceholder.typicode.com
-//http://cpv2api.com/
 //http://cpv2api.com/pens/showcase/sjcobb
 //https://api.github.com/users/sjcobb
 //http://stackoverflow.com/questions/43352056/how-do-i-make-an-api-call-to-github-for-a-users-pinned-repositories
@@ -45,9 +44,11 @@ var appSidebar = new Vue({
   el: '#app-sidebar',
   data: {
     linkList: [
+      { text: 'GitHub Profile', url: 'https://github.com/sjcobb' },
+      { text: 'CodePen Profile', url: 'https://codepen.io/sjcobb' },
+      { text: 'YouTube Channel: AI Duet', url: 'https://www.youtube.com/channel/UCo_IXLTK8dtF2qOUCt4l47Q' },
       { text: 'Awesome A-Frame', url: 'https://github.com/aframevr/awesome-aframe' },
-      { text: 'Three.js examples', url: 'https://threejs.org/examples' },
-      { text: 'Another link', url: '/' }
+      { text: 'Three.js examples', url: 'https://threejs.org/examples' }
     ]
   }
 })

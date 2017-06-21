@@ -40,6 +40,13 @@ section.l-vue > div {
   border-bottom: 1px solid #ddd;
 }
 
+.card {
+	margin: 0 0 30px 0;
+	img {
+		max-width: 100%;
+	}
+}
+
 #l-page {
 	margin: 0;
 	.l-content-header {
@@ -49,6 +56,8 @@ section.l-vue > div {
 		background-image: url("/assets/dk-woods.jpg");
 		background-attachment: fixed;
 		.text-container {
+			padding: 5px 0 140px 0;
+			background-image: linear-gradient(to top,rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.4) 100%,rgba(0,0,0,0) 100%);
 			color: #fff;
 			text-align: center;
 			h1 {
@@ -56,10 +65,18 @@ section.l-vue > div {
 				font-family: 'Roboto', sans-serif;
 				font-family: 'Slabo 27px', serif;
 				//text-transform: uppercase;
+				display: none;
+			}
+			p {
+				
+			}
+			span {
+				display: block;
 			}
 		}
 	}
 }
+
 #l-date {
 	background: #FF6E37;
 	text-align: center;
@@ -69,42 +86,48 @@ section.l-vue > div {
 		padding: 15px 0;
 	}
 }
+
+#penList {
+	margin: 30px 0 50px 0;
+}
+
 .cardboard-container {
+	max-height: 300px;
 	position: absolute;
 	top: 0;
 	right: 0;
 	left: 0;
 	.cardboard {
-	  display: flex;
-	  margin: auto;
-	  justify-content: center;
-	  flex-wrap: wrap;
-	  width: 500px;
-	  height: 325px;
-	  background: #0D0F1E;
-	  position: relative;
-	  animation: 2s warp ease-in-out infinite;
-	  transform: scale(0.25);
-	  &:before {
-	  	position: absolute;
-	  	top: 0;
-	  	width: 175px;
-	  	height: 325px;
-	  	background-color: #FFF;
-	  	border-radius: 30px 0px 20px 30px;
-	  	content: '';
-	  	left: 0;
-	  }
-	  &:after {
-	  	position: absolute;
-	  	top: 0;
-	  	width: 175px;
-	  	height: 325px;
-	  	background-color: #FFF;
-	  	border-radius: 0px 30px 30px 20px;
-	  	content: '';
-	  	right: 0;
-	  }
+		display: flex;
+		margin: 30px auto;
+		justify-content: center;
+		flex-wrap: wrap;
+		width: 500px;
+		height: 325px;
+		background: #0D0F1E;
+		position: relative;
+		animation: 2s warp ease-in-out infinite;
+		transform: scale(0.25);
+		&:before {
+			position: absolute;
+			top: 0;
+			width: 175px;
+			height: 325px;
+			background-color: #FFF;
+			border-radius: 30px 0px 20px 30px;
+			content: '';
+			left: 0;
+		}
+		&:after {
+			position: absolute;
+			top: 0;
+			width: 175px;
+			height: 325px;
+			background-color: #FFF;
+			border-radius: 0px 30px 30px 20px;
+			content: '';
+			right: 0;
+		}
 	  .nose {
 	    z-index: 1;
 	    position: absolute;
@@ -168,6 +191,7 @@ section.l-vue > div {
 	  }
 	}
 }
+
 @keyframes warp {
   0% {
     opacity: .5;
@@ -179,7 +203,12 @@ section.l-vue > div {
     opacity: .5;
   }
 }
-
+.blink_me {
+	animation: blinker 1s linear infinite;
+}
+@keyframes blinker {  
+  50% { opacity: 0; }
+}
 
 html {
 	&.d1999 {
@@ -187,6 +216,10 @@ html {
 			background-image: url(/assets/bg_stars.gif);
 			background-color: #000;
 			color: #fff;
+		}
+		#l-page .l-content-header .text-container {
+			background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+			animation: blinker 1s linear infinite;
 		}
 	}
 
